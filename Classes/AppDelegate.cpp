@@ -25,9 +25,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     if (screenSize.height > 320)
     {
-        searchPaths.push_back("hd");
+//        searchPaths.push_back("hd");
         searchPaths.push_back("sd");
-        pDirector->setContentScaleFactor(screenSize.height/designSize.height);
+//        pDirector->setContentScaleFactor(screenSize.height/designSize.height);
     }
     else
     {
@@ -36,7 +36,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
 	CCFileUtils::sharedFileUtils()->setSearchPaths(searchPaths);
 
-	CCEGLView::sharedOpenGLView()->setDesignResolutionSize(designSize.width, designSize.height, kResolutionNoBorder);
+	CCEGLView::sharedOpenGLView()->setDesignResolutionSize(designSize.width, designSize.height, kResolutionShowAll);
 
     // turn on display FPS
     pDirector->setDisplayStats(true);
